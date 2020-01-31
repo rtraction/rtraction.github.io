@@ -44,7 +44,7 @@ setTimeout(function() {
   theform.addEventListener("submit", function() {
       gtag_report_conversion();
       gtag('event', 'proposal-request', {'event_category': 'calculator'});
-  }
+  });
 
   var calculation_results = "<div class='sqs-block-html'><blockquote id='calculation_results'></blockquote></div>";
   var calculate_button = "<input type='button' value='CALCULATE' id='calculate_button' class='hs-button primary large'>";
