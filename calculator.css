@@ -36,7 +36,7 @@ background-color: #F4F4F4;
   max-width:none;
 }
 
-.hs-form-field {
+.hs-form-field, .hs-main-font-element {
   margin-bottom:1.25em;
 }
 
@@ -57,6 +57,7 @@ background-color: #F4F4F4;
 
 .hs-form ul {
   padding-left:0;
+  margin:0;
 }
 .hs-form-checkbox {
   list-style-type: none;
