@@ -41,16 +41,17 @@ setTimeout(function() {
   document.getElementsByClassName("hs_submit")[0].classList.add("getintouch");
 
   var theform = document.getElementsByTagName('form')[0];
-  theform.addEventListener("submit", function(){
-    gtag_report_conversion();
-    gtag('event', 'proposal-request', {'event_category' : 'calculator' });
+  theform.addEventListener("submit", function() {
+      gtag_report_conversion();
+      gtag('event', 'proposal-request', {'event_category': 'calculator'});
+  }
 
   var calculation_results = "<div class='sqs-block-html'><blockquote id='calculation_results'></blockquote></div>";
   var calculate_button = "<input type='button' value='CALCULATE' id='calculate_button' class='hs-button primary large'>";
   document.getElementsByName("TICKET.content")[0].outerHTML = calculate_button + calculation_results + document.getElementsByName("TICKET.content")[0].outerHTML;
 
   document.getElementById("calculate_button").addEventListener("click", function(){
-    
+
     gtag('event', 'calculate', {'event_category' : 'calculator' });
 
     //show the get in touch part of the form
@@ -66,7 +67,7 @@ setTimeout(function() {
       var funding = (parseInt(document.getElementsByName(funding_field_name)[0].value)/100)*budget;
       if(isNaN(funding)) { funding = 0; }
 
-      
+
 
       //unfunded operational budget
       var unfunded = budget - funding;//( 2*funding < budget ) ? (budget - funding) : budget;
