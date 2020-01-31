@@ -33,8 +33,11 @@ background-color: #F4F4F4;
 .hs-form textarea:focus, .hs-form input:focus,.hs-form select:focus { background:#fff; }
 
 .hs-form fieldset.form-columns-0,.hs-form fieldset.form-columns-1,.hs-form fieldset.form-columns-2 {
-  margin-bottom:1.25em;
   max-width:none;
+}
+
+.hs-form-field {
+  margin-bottom:1.25em;
 }
 
 .hs-form legend {
@@ -105,4 +108,13 @@ label[for="TICKET.content-ef20a3c6-fee4-48fa-8522-ce30f3ccde07"], textarea[name=
 }
 .getintouch {
   display: none;
+}
+.hs-error-msgs {
+  font-size: smaller;
+  color: #b50303;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+input.error {
+  border-color: #b50303;
 }
