@@ -16,6 +16,9 @@ background-color: #F4F4F4;
   border-radius: 2px;
   font-size:14px;
 }
+.hs-form input[name="lastname"] {
+  width: 90%;
+}
 .hs-form select {
   width: 200px;
   margin: 6px 0 4px;
