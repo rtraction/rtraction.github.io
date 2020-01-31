@@ -1,0 +1,49 @@
+
+.Main {
+background-color: #F4F4F4;
+}
+.hs-button.primary.large {
+  display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 1em 2.5em;
+    border-width: 0;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+      font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-family: Work Sans;
+    font-weight: 600;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+    background-color: #582f54;
+    border-color: #582f54;
+
+}
+li {
+  list-style: none;
+}
+input[type=checkbox] {
+  margin-top: 8px;
+}
+.input[data-reactid=".hbspt-forms-0.1:$2.1:$operating_budget.$operating_budget"]:before {
+  content: "$ ";
+}
+input[name="TICKET.content"] {
+  display: none;
+}
+blockquote {
+  margin: 2em auto;
+}
+label[for="TICKET.content-ef20a3c6-fee4-48fa-8522-ce30f3ccde07"], textarea[name="TICKET.content"] { display: none; }
+#calculate_button {
+  margin-bottom: 2em;
+}
+.getintouch {
+  display: none;
+}
