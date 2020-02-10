@@ -27,7 +27,7 @@ setTimeout(function() {
   document.getElementsByName(funding_field_name)[0].style.width = "200px";
 
   //hide the Get In Touch part
-  var fieldsets = document.getElementsByTagName('fieldset');
+  var fieldsets = document.getElementsByClassName('field');
   var getintouch = document.getElementById('get-in-touch');
   addclasses = false;
   for (var i = 0; fieldsets[i]; i++) {
@@ -39,6 +39,8 @@ setTimeout(function() {
     }
   }
   document.getElementsByClassName("hs_submit")[0].classList.add("getintouch");
+  document.getElementsByClassName("legal-consent-container")[0].classList.add("getintouch");
+  
 
   var theform = document.getElementsByTagName('form')[0];
   theform.addEventListener("submit", function() {
