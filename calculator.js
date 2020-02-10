@@ -63,6 +63,9 @@ setTimeout(function() {
     }
 
     document.getElementsByClassName('getintouch').style="display: block";
+    document.getElementsByClassName('hs-TICKET\.hs_pipeline_stage').style="display: none";
+    document.getElementsByClassName('hs-TICKET\.hs_pipeline').style="display: none";
+    
     if(document.getElementsByName(budget_field_name)[0]) {
       //get the field values
       var budget = parseInt(document.getElementsByName(budget_field_name)[0].value);
