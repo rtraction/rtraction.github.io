@@ -96,6 +96,7 @@ li {
 }
 input[type=checkbox] {
   margin-top: 8px;
+  width: auto;
 }
 .input[data-reactid=".hbspt-forms-0.1:$2.1:$operating_budget.$operating_budget"]:before {
   content: "$ ";
