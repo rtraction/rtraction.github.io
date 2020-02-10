@@ -40,12 +40,15 @@ setTimeout(function() {
   }
   document.getElementsByClassName("hs_submit")[0].classList.add("getintouch");
   document.getElementsByClassName("legal-consent-container")[0].classList.add("getintouch");
-  
-
+    
   var theform = document.getElementsByTagName('form')[0];
   theform.addEventListener("submit", function() {
-      gtag_report_conversion();
-      gtag('event', 'proposal-request', {'event_category': 'calculator'});
+    setTimeout(function(){ 
+      if(document.getElementsByClassName('submitted-message').length){
+        gtag_report_conversion();
+        gtag('event', 'proposal-request', {'event_category': 'calculator'});
+      }
+    }, 500);
   });
 
   var calculation_results = "<div class='sqs-block-html'><blockquote id='calculation_results'></blockquote></div>";
