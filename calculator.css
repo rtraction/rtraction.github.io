@@ -122,3 +122,6 @@ label[for="TICKET.content-ef20a3c6-fee4-48fa-8522-ce30f3ccde07"], textarea[name=
 input.error {
   border-color: #b50303;
 }
+.hs_TICKET\.subject.hs-TICKET\.subject.hs-fieldtype-text.field.hs-form-field {
+  display:none;
+}
