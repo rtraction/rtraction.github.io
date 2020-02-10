@@ -125,3 +125,6 @@ input.error {
 .hs_TICKET\.subject.hs-TICKET\.subject.hs-fieldtype-text.field.hs-form-field {
   display:none;
 }
+.hs_TICKET\.hs_pipeline_stage, .hs_TICKET\.hs_pipeline {
+  display:none!important;
+}
