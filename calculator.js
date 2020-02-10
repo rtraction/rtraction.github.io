@@ -63,6 +63,7 @@ setTimeout(function() {
     }
 
     document.getElementsByClassName('getintouch')[0].style="display: block";
+    document.getElementsByClassName('hs_TICKET\.subject')[0].style="display: none";
     document.getElementsByClassName('hs-TICKET\.hs_pipeline_stage')[0].style="display: none";
     document.getElementsByClassName('hs-TICKET\.hs_pipeline')[0].style="display: none";
     
