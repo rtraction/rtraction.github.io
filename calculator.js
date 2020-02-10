@@ -62,9 +62,9 @@ setTimeout(function() {
       getintouchfieldsets[i].style="display: block";
     }
 
-    document.getElementsByClassName('getintouch').style="display: block";
-    document.getElementsByClassName('hs-TICKET\.hs_pipeline_stage').style="display: none";
-    document.getElementsByClassName('hs-TICKET\.hs_pipeline').style="display: none";
+    document.getElementsByClassName('getintouch')[0].style="display: block";
+    document.getElementsByClassName('hs-TICKET\.hs_pipeline_stage')[0].style="display: none";
+    document.getElementsByClassName('hs-TICKET\.hs_pipeline')[0].style="display: none";
     
     if(document.getElementsByName(budget_field_name)[0]) {
       //get the field values
