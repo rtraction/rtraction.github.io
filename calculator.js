@@ -49,7 +49,7 @@ setTimeout(function() {
   });
 
   var calculation_results = "<div class='sqs-block-html'><blockquote id='calculation_results'></blockquote></div>";
-  var calculate_button = "<input type='button' value='CALCULATE' id='calculate_button' class='hs-button primary large'>";
+  var calculate_button = "<input type='submit' value='CALCULATE' id='calculate_button' class='hs-button primary large'>";
   document.getElementsByName("TICKET.content")[0].outerHTML = calculate_button + calculation_results + document.getElementsByName("TICKET.content")[0].outerHTML;
 
   document.getElementById("calculate_button").addEventListener("click", function(){
