@@ -103,8 +103,7 @@ function packageText(monthly) {
     var low = roundNext500(rtr_low_multiplier * total_budget);
     var high = roundNext500(rtr_high_multiplier * total_budget);
 
-    var rtr_package = rtr_packages[i];
-    i = parseInt(i).toFixed(2);
+    var rtr_package = rtr_packages[monthly];
 
     var range = "approximately <strong>$" + formatNumber(low) + " - $" + formatNumber(high) + " every 3-5 years</strong>";
     var plan = "<strong>" + rtr_package + "</strong>";
