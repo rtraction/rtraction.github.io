@@ -9,7 +9,6 @@ var rtr_low_multiplier = 0.025; // 2.5%
 var rtr_high_multiplier = 0.03; // 3%
 var rtr_multiplier = 0.0275; //middle of the budget range we display
 
-
 function gtag_report_conversion(url) {
     var callback = function () {
         if (typeof(url) !== 'undefined') {
@@ -53,7 +52,6 @@ setTimeout(function () {
                 var results = packageText(price);
                 document.getElementById("calculation_results").innerHTML = results;
                 document.getElementsByName("TICKET.content")[0].value = results.replace("<strong>", "").replace("</strong>", "").replace("<br />", "\n");
-
             }
         }, 500);
     });
