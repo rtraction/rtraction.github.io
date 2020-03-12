@@ -19,6 +19,11 @@ function formatNumber(n) {
 }
 
 setTimeout(function() {
+
+  if(window.location.href === 'https://www.rtraction.com/calculator2' || window.location.href === 'https://rtraction.squarespace.com/calculator2') {
+    return;
+  }
+
   //field names
   var budget_field_name = "operating_budget"; // <input name="budget" ...
   var funding_field_name = "government_spending_percent";
