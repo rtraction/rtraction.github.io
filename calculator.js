@@ -5,6 +5,10 @@ var rtr_packages = {
     3201: "Platinum Package (Contact us for pricing)"
 };
 
+//field names
+var budget_field_name = "operating_budget"; // <input name="budget" ...
+var funding_field_name = "government_spending_percent";
+
 var rtr_low_multiplier = 0.025; // 2.5%
 var rtr_high_multiplier = 0.03; // 3%
 var rtr_multiplier = 0.0275; //middle of the budget range we display
@@ -32,9 +36,7 @@ function formatNumber(n) {
 }
 
 setTimeout(function () {
-    //field names
-    var budget_field_name = "operating_budget"; // <input name="budget" ...
-    var funding_field_name = "government_spending_percent";
+
 
     document.getElementsByName(budget_field_name)[0].style.width = "200px";
     document.getElementsByName(funding_field_name)[0].style.width = "200px";
