@@ -124,7 +124,12 @@ input.error {
   border-color: #b50303;
 }
 .hs_TICKET\.subject.hs-TICKET\.subject.hs-fieldtype-text.field.hs-form-field,
+.hs_TICKET\.content,
 .hs_TICKET\.hs_pipeline_stage, 
 .hs_TICKET\.hs_pipeline {
   display:none;!important;
+}
+
+.legal-consent-container em {
+  font-size: smaller;
 }

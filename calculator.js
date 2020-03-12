@@ -43,23 +43,23 @@ setTimeout(function () {
 
     var theform = document.getElementsByTagName('form')[0];
     theform.addEventListener("submit", function () {
-        setTimeout(function () {
+
+        var price = calculate();
+        var results = packageText(price);
+
+        setTimeout(function() {
             if (document.getElementsByClassName('submitted-message').length) {
 
                 gtag('event', 'calculate', {'event_category': 'calculator'});
                 gtag_report_conversion();
                 gtag('event', 'proposal-request', {'event_category': 'calculator'});
 
-                var price = calculate();
-                var results = packageText(price);
+
                 document.getElementById("calculation_results").innerHTML = results;
                 document.getElementsByName("TICKET.content")[0].value = results.replace("<strong>", "").replace("</strong>", "").replace("<br />", "\n");
             }
-        }, 500);
+        }, 500, price, results);
     });
-
-    var calculation_results = "<div class='sqs-block-html'><blockquote id='calculation_results'></blockquote></div>";
-    document.getElementsByName("TICKET.content")[0].outerHTML = calculate_button + calculation_results + document.getElementsByName("TICKET.content")[0].outerHTML;
 }, 1000); //timeout
 
 function calculate() {
