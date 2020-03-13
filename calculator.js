@@ -67,21 +67,16 @@ function calculate() {
     if (document.getElementsByName(budget_field_name)[0]) {
         //get the field values
         var budget = parseInt(document.getElementsByName(budget_field_name)[0].value);
-        var funding = (parseInt(document.getElementsByName(funding_field_name)[0].value) / 100) * budget;
+        var funded = (parseInt(document.getElementsByName(funding_field_name)[0].value) / 100) * budget;
         if (isNaN(funding)) {
             funding = 0;
         }
 
-        console.log('budget:' + budget);
-        console.log('funding:' + funding);
-
-        //unfunded operational budget
-        var funded = budget * funding; //funding is a percentage
 
         console.log('budget:' + budget);
-        console.log('funding:' + funding);
         console.log('funded:' + funded);
 
+        //unfunded operational budget
         if (budget <= funded) {
             return 0;
         }
