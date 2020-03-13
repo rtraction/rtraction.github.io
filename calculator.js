@@ -57,6 +57,8 @@ setTimeout(function () {
 
                 document.getElementById("calculation_results").innerHTML = results;
                 document.getElementsByName("TICKET.content")[0].value = results.replace("<strong>", "").replace("</strong>", "").replace("<br />", "\n");
+
+                document.getElementsByTagName("BODY")[0].classList.add("show-results");
             }
         }, 500, price, results);
     });
