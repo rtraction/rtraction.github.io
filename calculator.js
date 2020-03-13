@@ -74,6 +74,7 @@ function calculate() {
 
         //unfunded operational budget
         var funded = budget * funding; //funding is a percentage
+        console.log('funded:' + funded);
         if (budget <= funded) {
             return 0;
         }
