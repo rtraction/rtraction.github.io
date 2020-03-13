@@ -72,14 +72,23 @@ function calculate() {
             funding = 0;
         }
 
+        console.log('budget:' + budget);
+        console.log('funding:' + funding);
+
         //unfunded operational budget
         var funded = budget * funding; //funding is a percentage
+
+        console.log('budget:' + budget);
+        console.log('funding:' + funding);
         console.log('funded:' + funded);
+
         if (budget <= funded) {
             return 0;
         }
 
         var unfunded = budget - funded;
+        console.log('unfunded:' + unfunded);
+
         var monthly = parseInt(roundNext500(rtr_multiplier * unfunded)) / 36; //36: THE MAGIC PACKAGE NUMBER (36 months)
 
         for (var i in rtr_packages) {
