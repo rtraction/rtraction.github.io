@@ -47,20 +47,21 @@ setTimeout(function () {
         var price = calculate();
         var results = packageText(price);
 
+        //human readable results
+        document.getElementById("calculation_results").innerHTML = results;
+        document.getElementsByName("TICKET.content")[0].value = results.replace("<strong>", "").replace("</strong>", "").replace("<br />", "\n");
+
+
         setTimeout(function() {
             if (document.getElementsByClassName('submitted-message').length) {
-
                 gtag('event', 'calculate', {'event_category': 'calculator'});
                 gtag_report_conversion();
                 gtag('event', 'proposal-request', {'event_category': 'calculator'});
 
-
-                document.getElementById("calculation_results").innerHTML = results;
-                document.getElementsByName("TICKET.content")[0].value = results.replace("<strong>", "").replace("</strong>", "").replace("<br />", "\n");
-
+                //show the results
                 document.getElementsByTagName("BODY")[0].classList.add("show-results");
             }
-        }, 500, price, results);
+        }, 500);
     });
 }, 1000); //timeout
 
