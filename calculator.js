@@ -68,10 +68,6 @@ function calculate() {
         //get the field values
         var budget = parseInt(document.getElementsByName(budget_field_name)[0].value);
         var funded = (parseInt(document.getElementsByName(funding_field_name)[0].value) / 100) * budget;
-        if (isNaN(funding)) {
-            funding = 0;
-        }
-
 
         console.log('budget:' + budget);
         console.log('funded:' + funded);
