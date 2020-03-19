@@ -139,6 +139,9 @@ input.error {
 #block-yui_3_17_2_1_1584039749962_6144 {
   display: none;
 }
+
+.editing-page #block-yui_3_17_2_1_1584039310609_5368,
+.editing-page #block-yui_3_17_2_1_1584039749962_6144,
 .show-results #block-yui_3_17_2_1_1584039310609_5368,
 .show-results #block-yui_3_17_2_1_1584039749962_6144 {
   display: block;
