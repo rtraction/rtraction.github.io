@@ -124,11 +124,7 @@ function packageText(monthly) {
 
     if(monthly <= 800) {
         range = "<strong>less than $10,000 every 3-5 years</strong>";
-    } else if(monthly <=1400) {
-        range = "approximately <strong>$28,800 - $50,400 every 3-5 years</strong>";
-    } else if(monthly <= 3200) {
-        range = "approximately <strong>$50,400 - $115,400 every 3-5 years</strong>";
-    } else {
+    } else if (monthly >= 3201) {
         range = "<strong>more than $115,000 every 3-5 years</strong>";
     }
 
