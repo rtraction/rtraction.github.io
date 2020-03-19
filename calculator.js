@@ -12,12 +12,13 @@ var calculation = {
     'multiplier': 0.0275 // Companies spend an average of 2.75% (2.5-3%) of their unfunded budget on their website
 };
 
-calculation.roundNext500 = function (number) {
-    return Math.ceil((calculation.parseInt(number) + 1) / 500) * 500;
-};
 
 calculation.parseInt = function(value) {
     return parseInt(value, 10) || 0;
+};
+
+calculation.roundNext500 = function (number) {
+    return Math.ceil((calculation.parseInt(number) + 1) / 500) * 500;
 };
 
 calculation.formatNumber = function (n) {
