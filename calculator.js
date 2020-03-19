@@ -69,8 +69,8 @@ function calculate() {
 
     if (document.getElementsByName(budget_field_name)[0]) {
         //get the field values
-        var budget = parseInt(document.getElementsByName(budget_field_name)[0].value);
-        var funded = (parseInt(document.getElementsByName(funding_field_name)[0].value) / 100) * budget;
+        var budget = parseInt(document.getElementsByName(budget_field_name)[0].value) || 0;
+        var funded = ((parseInt(document.getElementsByName(funding_field_name)[0].value) || 0) / 100) * budget;
 
         console.log('budget:' + budget);
         console.log('funded:' + funded);
