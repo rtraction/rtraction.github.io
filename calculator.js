@@ -13,7 +13,7 @@ var calculation = {
 };
 
 calculation.roundNext500 = function (number) {
-    return Math.ceil((rtrParseInt(number) + 1) / 500) * 500;
+    return Math.ceil((calculation.parseInt(number) + 1) / 500) * 500;
 };
 
 calculation.parseInt = function(value) {
