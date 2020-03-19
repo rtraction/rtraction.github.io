@@ -39,7 +39,7 @@ background-color: #F4F4F4;
   max-width:none;
 }
 
-.hs-form-field, .hs-main-font-element {
+.hs-form-field {
   margin-bottom:1.25em;
 }
 
@@ -105,7 +105,7 @@ input[name="TICKET.content"] {
   display: none;
 }
 blockquote {
-  margin: 2em auto;
+  margin: 0 auto;
 }
 label[for="TICKET.content-ef20a3c6-fee4-48fa-8522-ce30f3ccde07"], textarea[name="TICKET.content"] { display: none; }
 #calculate_button {
