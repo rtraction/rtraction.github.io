@@ -28,31 +28,31 @@ calculation.formatNumber = function (n) {
 
 calculation.operatingBudget = function() {
     var operating_budget = calculation.parseInt(document.getElementsByName(calculation.budget_field_name)[0].value);
-    console.log('operating_budget:' + operating_budget);
+    // console.log('operating_budget:' + operating_budget);
     return operating_budget;
 };
 
 calculation.funding = function() {
-    var funded_budget = (calculation.parseInt(document.getElementsByName(calculation.funding_field_name)[0].value) / 100) * calculation.operatingBudget()
-    console.log('funded: ' + funded_budget);
+    var funded_budget = calculation.parseInt(document.getElementsByName(calculation.funding_field_name)[0].value) / 100 * calculation.operatingBudget();
+    // console.log('funded: ' + funded_budget);
     return funded_budget;
 };
 
 calculation.unfunded = function () {
     var unfunded = calculation.operatingBudget() - calculation.funding();
-    console.log('unfunded: ' + unfunded);
+    // console.log('unfunded: ' + unfunded);
     return unfunded;
 };
 
 calculation.lowRange = function() {
-    var low_range = calculation.parseInt(calculation.roundNext500(calculation.low_multiplier * calculation.unfunded()))
-    console.log('low_range: ' + low_range);
+    var low_range = calculation.parseInt(calculation.roundNext500(calculation.low_multiplier * calculation.unfunded()));
+    // console.log('low_range: ' + low_range);
     return low_range
 };
 
 calculation.highRange = function() {
-    var high_range = calculation.parseInt(calculation.roundNext500(calculation.high_multiplier * calculation.unfunded()))
-    console.log('high_range: ' + high_range);
+    var high_range = calculation.parseInt(calculation.roundNext500(calculation.high_multiplier * calculation.unfunded()));
+    // console.log('high_range: ' + high_range);
     return high_range;
 };
 
