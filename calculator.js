@@ -13,8 +13,8 @@ rtrParseInt = function(value) {
 var budget_field_name = "operating_budget"; // <input name="budget" ...
 var funding_field_name = "government_spending_percent";
 
-var rtr_low_multiplier = 0.025; // 2.5%
-var rtr_high_multiplier = 0.03; // 3%
+var rtr_low_multiplier = 32.727273; // Roughly 2.5% of their operating budget if multiplied by their monthly
+var rtr_high_multiplier = 39.272727; // Roughly 3% of their operating budget if multiplied by their monthly
 var rtr_multiplier = 0.0275; //middle of the budget range we display
 
 function gtag_report_conversion(url) {
@@ -122,11 +122,11 @@ function packageText(monthly) {
     var range = "approximately <strong>$" + formatNumber(low) + " - $" + formatNumber(high) + " every 3-5 years</strong>";
     var plan = "<strong>" + rtr_package + "</strong>";
 
-    if (high < 1400) {
+    if (high < 10000) {
         range = "<strong>less than $10,000 every 3-5 years</strong>";
     }
-    if (high > 3200) {
-        range = "<strong>more than $150,000 every 3-5 years</strong>";
+    if (high > 200000) {
+        range = "<strong>more than $200,000 every 3-5 years</strong>";
     }
 
     //calculator results
