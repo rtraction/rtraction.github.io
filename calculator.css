@@ -140,8 +140,8 @@ input.error {
   display: none;
 }
 
-.editing-page #block-yui_3_17_2_1_1584039310609_5368,
-.editing-page #block-yui_3_17_2_1_1584039749962_6144,
+#block-yui_3_17_2_1_1584039310609_5368.sqs-block-editable,
+#block-yui_3_17_2_1_1584039749962_6144.sqs-block-editable,
 .show-results #block-yui_3_17_2_1_1584039310609_5368,
 .show-results #block-yui_3_17_2_1_1584039749962_6144 {
   display: block;
