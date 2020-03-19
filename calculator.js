@@ -108,8 +108,8 @@ function packageText(monthly) {
 
     var total_budget = monthly * 36; // magic package number from before
 
-    var low = roundNext500(rtr_low_multiplier * total_budget);
-    var high = roundNext500(rtr_high_multiplier * total_budget);
+    var low = roundNext500(rtr_low_multiplier * monthly);
+    var high = roundNext500(rtr_high_multiplier * monthly);
 
     console.log('budget:' + total_budget);
 
@@ -122,11 +122,14 @@ function packageText(monthly) {
     var range = "approximately <strong>$" + formatNumber(low) + " - $" + formatNumber(high) + " every 3-5 years</strong>";
     var plan = "<strong>" + rtr_package + "</strong>";
 
-    if (high < 10000) {
+    if(monthly <= 800) {
         range = "<strong>less than $10,000 every 3-5 years</strong>";
-    }
-    if (high > 200000) {
-        range = "<strong>more than $200,000 every 3-5 years</strong>";
+    } else if(monthly <=1400) {
+        range = "approximately <strong>$28,800 - $50,400 every 3-5 years</strong>";
+    } else if(monthly <= 3200) {
+        range = "approximately <strong>$50,400 - $115,400 every 3-5 years</strong>";
+    } else {
+        range = "<strong>more than $115,000 every 3-5 years</strong>";
     }
 
     //calculator results
