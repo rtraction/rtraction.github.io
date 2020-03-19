@@ -45,19 +45,19 @@ calculation.unfunded = function () {
 };
 
 calculation.lowRange = function() {
-    var low_range = calculation.ParseInt(calculation.roundNext500(calculation.low_multiplier * calculation.unfunded()))
+    var low_range = calculation.parseInt(calculation.roundNext500(calculation.low_multiplier * calculation.unfunded()))
     console.log('low_range: ' + low_range);
     return low_range
 };
 
 calculation.highRange = function() {
-    var high_range = calculation.ParseInt(calculation.roundNext500(calculation.high_multiplier * calculation.unfunded()))
+    var high_range = calculation.parseInt(calculation.roundNext500(calculation.high_multiplier * calculation.unfunded()))
     console.log('high_range: ' + high_range);
     return high_range;
 };
 
 calculation.monthly = function() {
-    var monthly = calculation.ParseInt(calculation.roundNext500(calculation.multiplier * calculation.unfunded())) / 36; //36: THE MAGIC PACKAGE NUMBER (36 months)
+    var monthly = calculation.parseInt(calculation.roundNext500(calculation.multiplier * calculation.unfunded())) / 36; //36: THE MAGIC PACKAGE NUMBER (36 months)
 
     for (var i in calculation.packages) {
         if (monthly <= i) {
