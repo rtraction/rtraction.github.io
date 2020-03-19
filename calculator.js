@@ -73,8 +73,8 @@ function calculate() {
 
     if (document.getElementsByName(budget_field_name)[0]) {
         //get the field values
-        var budget = rtrParseInt(document.getElementsByName(budget_field_name)[0].value) || 0;
-        var funded = ((rtrParseInt(document.getElementsByName(funding_field_name)[0].value) || 0) / 100) * budget;
+        var budget = rtrParseInt(document.getElementsByName(budget_field_name)[0].value);
+        var funded = (rtrParseInt(document.getElementsByName(funding_field_name)[0].value) / 100) * budget;
 
         console.log('budget:' + budget);
         console.log('funded:' + funded);
