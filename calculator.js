@@ -111,8 +111,10 @@ function packageText(monthly) {
     var low = roundNext500(rtr_low_multiplier * total_budget);
     var high = roundNext500(rtr_high_multiplier * total_budget);
 
+    console.log('budget:' + total_budget);
+
     console.log('low:' + low);
-    console.log('medium:' + total_budget);
+    console.log('medium:' + monthly * rtr_multiplier);
     console.log('high:' + high);
 
     var rtr_package = rtr_packages[monthly];
