@@ -5,6 +5,10 @@ var rtr_packages = {
     3201: "Platinum Package (Contact us for pricing)"
 };
 
+rtrParseInt = function(value) {
+    return parseInt(value, 10) || 0;
+};
+
 //field names
 var budget_field_name = "operating_budget"; // <input name="budget" ...
 var funding_field_name = "government_spending_percent";
@@ -27,7 +31,7 @@ function gtag_report_conversion(url) {
 }
 
 function roundNext500(number) {
-    return Math.ceil((parseInt(number) + 1) / 500) * 500;
+    return Math.ceil((rtrParseInt(number) + 1) / 500) * 500;
 }
 
 function formatNumber(n) {
@@ -69,8 +73,8 @@ function calculate() {
 
     if (document.getElementsByName(budget_field_name)[0]) {
         //get the field values
-        var budget = parseInt(document.getElementsByName(budget_field_name)[0].value) || 0;
-        var funded = ((parseInt(document.getElementsByName(funding_field_name)[0].value) || 0) / 100) * budget;
+        var budget = rtrParseInt(document.getElementsByName(budget_field_name)[0].value) || 0;
+        var funded = ((rtrParseInt(document.getElementsByName(funding_field_name)[0].value) || 0) / 100) * budget;
 
         console.log('budget:' + budget);
         console.log('funded:' + funded);
@@ -83,7 +87,7 @@ function calculate() {
         var unfunded = budget - funded;
         console.log('unfunded:' + unfunded);
 
-        var monthly = parseInt(roundNext500(rtr_multiplier * unfunded)) / 36; //36: THE MAGIC PACKAGE NUMBER (36 months)
+        var monthly = rtrParseInt(roundNext500(rtr_multiplier * unfunded)) / 36; //36: THE MAGIC PACKAGE NUMBER (36 months)
 
         for (var i in rtr_packages) {
             if (monthly <= i) {
@@ -92,7 +96,7 @@ function calculate() {
         }
 
         if (i === 1401) {
-            i = (Math.ceil((parseInt(monthly) + 1) / 10) * 10);
+            i = (Math.ceil((rtrParseInt(monthly) + 1) / 10) * 10);
         }
 
         return i;
