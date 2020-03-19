@@ -13,9 +13,9 @@ rtrParseInt = function(value) {
 var budget_field_name = "operating_budget"; // <input name="budget" ...
 var funding_field_name = "government_spending_percent";
 
-var rtr_low_multiplier = 32.727273; // Roughly 2.5% of their operating budget if multiplied by their monthly
-var rtr_high_multiplier = 39.272727; // Roughly 3% of their operating budget if multiplied by their monthly
-var rtr_multiplier = 0.0275; //middle of the budget range we display
+var rtr_low_multiplier = 32.7; // Roughly 2.5% of their operating budget if multiplied by their monthly
+var rtr_high_multiplier = 39.3; // Roughly 3% of their operating budget if multiplied by their monthly
+var rtr_multiplier = 0.0275; // Companies spend an average of 2.75% (2.5-3%) of their unfunded budget on their website
 
 function gtag_report_conversion(url) {
     var callback = function () {
@@ -125,7 +125,7 @@ function packageText(monthly) {
     if(monthly <= 800) {
         range = "<strong>less than $10,000 every 3-5 years</strong>";
     } else if (monthly >= 3201) {
-        range = "<strong>more than $115,000 every 3-5 years</strong>";
+        range = "<strong>more than $150,000 every 3-5 years</strong>";
     }
 
     //calculator results
