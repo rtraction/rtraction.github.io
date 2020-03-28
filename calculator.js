@@ -93,7 +93,7 @@ var calculation = {
                 //show the results
                 document.getElementsByTagName("BODY")[0].classList.add("show-results");
             }
-        }, 1000);
+        }, 500);
 
     },
     'init': function(){
