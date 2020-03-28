@@ -85,25 +85,24 @@ var calculation = {
         document.getElementsByName("TICKET.content")[0].value = results.replace("<strong>", "").replace("</strong>", "").replace("<br />", "\n");
 
         setTimeout(function() {
-            if (document.getElementsByClassName('submitted-message').length) {
+            // if (document.getElementsByClassName('submitted-message').length) {
                 gtag('event', 'calculate', {'event_category': 'calculator'});
                 gtag_report_conversion();
                 gtag('event', 'proposal-request', {'event_category': 'calculator'});
 
                 //show the results
                 document.getElementsByTagName("BODY")[0].classList.add("show-results");
-            }
-        }, 500);
+            // }
+        }, 1000);
 
     },
     'init': function(){
         setTimeout(function() {
-            console.log(this.budget_field_name);/**/
             document.getElementsByName(this.budget_field_name)[0].style.width = "200px";
             document.getElementsByName(this.funding_field_name)[0].style.width = "200px";
 
             var theform = document.getElementsByTagName('form')[0];
-            theform.addEventListener("submit", this.submit);
+            theform.addEventListener("submit", function() { this.submit() });
         }.bind(this), 2000); //timeout
     },
     'submit': function(){
