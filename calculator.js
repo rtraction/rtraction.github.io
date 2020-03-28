@@ -85,14 +85,14 @@ var calculation = {
         document.getElementsByName("TICKET.content")[0].value = results.replace("<strong>", "").replace("</strong>", "").replace("<br />", "\n");
 
         setTimeout(function() {
-            // if (document.getElementsByClassName('submitted-message').length) {
+            if (document.getElementsByClassName('submitted-message').length) {
                 gtag('event', 'calculate', {'event_category': 'calculator'});
                 gtag_report_conversion();
                 gtag('event', 'proposal-request', {'event_category': 'calculator'});
 
                 //show the results
                 document.getElementsByTagName("BODY")[0].classList.add("show-results");
-            // }
+            }
         }, 1000);
 
     },
