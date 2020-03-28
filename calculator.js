@@ -102,7 +102,8 @@ var calculation = {
             document.getElementsByName(this.funding_field_name)[0].style.width = "200px";
 
             var theform = document.getElementsByTagName('form')[0];
-            theform.addEventListener("submit", function() { this.submit() });
+            var that = this;
+            theform.addEventListener("submit", function() { that.submit() });
         }.bind(this), 2000); //timeout
     },
     'submit': function(){
@@ -126,3 +127,8 @@ function gtag_report_conversion(url) {
     });
     return false;
 }
+
+
+
+
+
